@@ -1,6 +1,5 @@
 # Compiled files
-bin/
-out/
+target/
 *.class
 
 # Logs and temp files
@@ -11,6 +10,5 @@ out/
 .DS_Store
 Thumbs.db
 
-# VS Code (keep project settings)
-.vscode/*
-!.vscode/settings.json
+# VS Code
+.vscode/
