@@ -1,7 +1,22 @@
 package pl.travelbrowser;
 
+import java.io.IOException;
+import java.nio.file.NoSuchFileException;
+import java.util.List;
+
+import pl.travelbrowser.data.OfferLoader;
+import pl.travelbrowser.model.Offer;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("Cześć! Java działa prawidłowo.");
+        OfferLoader offerLoader = new OfferLoader();
+        try {
+            List<Offer> offers = offerLoader.load("data/offer.json");
+        } catch (NoSuchFileException e) {
+            System.err.println("Nie znaleziono pliku.");
+        } catch (IOException e) {
+            System.err.println("Blad: " + e.getMessage());
+        }
+
     }
 }
