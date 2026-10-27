@@ -34,6 +34,8 @@ public abstract class Offer {
         this.images = images;
     }
 
+    public abstract String getTypeName();
+
     public int getId() {
         return id;
     }

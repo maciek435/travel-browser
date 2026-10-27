@@ -32,4 +32,9 @@ public class HotelOffer extends Offer {
     public String toString() {
         return "#" + getId() + " " + getTitle() + ", " + city + ", " + getCountry() + ", " + hotelStars + "*, " + getPricePerPerson() + " zł";
     }
+
+    @Override 
+    public String getTypeName() {
+        return "Wypoczynek";
+    }
 }

@@ -15,11 +15,18 @@ public class App {
             for (String error : offerLoader.getErrors()) {
                 System.err.println(error);
             }
+
+            System.out.println("Liczba ofert: " + offers.size());
+            for (Offer offer : offers) {
+                System.out.println(offer.getTransportType());
+            }
         } catch (NoSuchFileException e) {
             System.err.println("Nie znaleziono pliku: "+ e.getMessage());
         } catch (IOException e) {
             System.err.println("Blad: " + e.getMessage());
         }
+
+        
 
     }
 }

@@ -33,4 +33,8 @@ public class RoundTripOffer extends Offer {
                 + getPricePerPerson() + " zł";
     }
 
+    @Override 
+    public String getTypeName() {
+        return "Wycieczka objazdowa";
+    }
 }
