@@ -1743,5 +1743,495 @@
       "https://picsum.photos/seed/offer60-2/800/500",
       "https://picsum.photos/seed/offer60-3/800/500"
     ]
+  },
+  {
+    "id": 61,
+    "holidayType": "ROUND_TRIP",
+    "title": "Włoskie klasyki",
+    "description": "Najsłynniejsze miasta Italii: od Koloseum, przez Duomo i krzywą wieżę, po kanały Wenecji.",
+    "country": "Włochy",
+    "startDate": "2027-08-10",
+    "endDate": "2027-08-19",
+    "departureCity": "Poznań",
+    "transportType": "BUS",
+    "maxGuests": 20,
+    "mealPlan": "HALF_BOARD",
+    "pricePerPerson": 3059.0,
+    "customerRating": 9.4,
+    "images": [
+      "https://picsum.photos/seed/trip61-1/800/500",
+      "https://picsum.photos/seed/trip61-2/800/500",
+      "https://picsum.photos/seed/trip61-3/800/500"
+    ],
+    "tripRoute": [
+      "Rzym",
+      "Florencja",
+      "Piza",
+      "Wenecja"
+    ]
+  },
+  {
+    "id": 62,
+    "holidayType": "ROUND_TRIP",
+    "title": "Sycylia dookoła",
+    "description": "Wyspa wulkanów, barokowych miasteczek i greckich świątyń. Wjazd na zbocza Etny.",
+    "country": "Włochy",
+    "startDate": "2027-05-04",
+    "endDate": "2027-05-11",
+    "departureCity": "Kraków",
+    "transportType": "PLANE",
+    "maxGuests": 20,
+    "mealPlan": "HALF_BOARD",
+    "pricePerPerson": 3799.0,
+    "customerRating": 8.6,
+    "images": [
+      "https://picsum.photos/seed/trip62-1/800/500",
+      "https://picsum.photos/seed/trip62-2/800/500",
+      "https://picsum.photos/seed/trip62-3/800/500"
+    ],
+    "tripRoute": [
+      "Palermo",
+      "Cefalù",
+      "Taormina",
+      "Syrakuzy",
+      "Agrigento"
+    ]
+  },
+  {
+    "id": 63,
+    "holidayType": "ROUND_TRIP",
+    "title": "Andaluzja w pigułce",
+    "description": "Alhambra, Mezquita i białe miasteczka. Wieczór flamenco w Sewilli.",
+    "country": "Hiszpania",
+    "startDate": "2027-09-08",
+    "endDate": "2027-09-15",
+    "departureCity": "Warszawa",
+    "transportType": "PLANE",
+    "maxGuests": 40,
+    "mealPlan": "HALF_BOARD",
+    "pricePerPerson": 3709.0,
+    "customerRating": 9.7,
+    "images": [
+      "https://picsum.photos/seed/trip63-1/800/500",
+      "https://picsum.photos/seed/trip63-2/800/500",
+      "https://picsum.photos/seed/trip63-3/800/500"
+    ],
+    "tripRoute": [
+      "Malaga",
+      "Granada",
+      "Kordoba",
+      "Sewilla",
+      "Ronda"
+    ]
+  },
+  {
+    "id": 64,
+    "holidayType": "ROUND_TRIP",
+    "title": "Skarby Kastylii",
+    "description": "Królewski Madryt, średniowieczne Toledo i akwedukt w Segowii.",
+    "country": "Hiszpania",
+    "startDate": "2027-05-16",
+    "endDate": "2027-05-26",
+    "departureCity": "Wrocław",
+    "transportType": "BUS",
+    "maxGuests": 40,
+    "mealPlan": "FULL_BOARD",
+    "pricePerPerson": 3399.0,
+    "customerRating": 7.7,
+    "images": [
+      "https://picsum.photos/seed/trip64-1/800/500",
+      "https://picsum.photos/seed/trip64-2/800/500",
+      "https://picsum.photos/seed/trip64-3/800/500"
+    ],
+    "tripRoute": [
+      "Madryt",
+      "Toledo",
+      "Segowia",
+      "Salamanka"
+    ]
+  },
+  {
+    "id": 65,
+    "holidayType": "ROUND_TRIP",
+    "title": "Portugalia od Porto do Lizbony",
+    "description": "Winnice doliny Douro, uniwersytecka Coimbra i pałace Sintry.",
+    "country": "Portugalia",
+    "startDate": "2027-05-01",
+    "endDate": "2027-05-08",
+    "departureCity": "Kraków",
+    "transportType": "PLANE",
+    "maxGuests": 30,
+    "mealPlan": "FULL_BOARD",
+    "pricePerPerson": 3849.0,
+    "customerRating": 7.9,
+    "images": [
+      "https://picsum.photos/seed/trip65-1/800/500",
+      "https://picsum.photos/seed/trip65-2/800/500",
+      "https://picsum.photos/seed/trip65-3/800/500"
+    ],
+    "tripRoute": [
+      "Porto",
+      "Coimbra",
+      "Fátima",
+      "Sintra",
+      "Lizbona"
+    ]
+  },
+  {
+    "id": 66,
+    "holidayType": "ROUND_TRIP",
+    "title": "Klasyczna Grecja",
+    "description": "Śladami antyku: Akropol, wyrocznia w Delfach i klasztory na skałach Meteorów.",
+    "country": "Grecja",
+    "startDate": "2027-09-13",
+    "endDate": "2027-09-21",
+    "departureCity": "Wrocław",
+    "transportType": "PLANE",
+    "maxGuests": 45,
+    "mealPlan": "HALF_BOARD",
+    "pricePerPerson": 3939.0,
+    "customerRating": 7.8,
+    "images": [
+      "https://picsum.photos/seed/trip66-1/800/500",
+      "https://picsum.photos/seed/trip66-2/800/500",
+      "https://picsum.photos/seed/trip66-3/800/500"
+    ],
+    "tripRoute": [
+      "Ateny",
+      "Korynt",
+      "Mykeny",
+      "Olimpia",
+      "Delfy",
+      "Meteory"
+    ]
+  },
+  {
+    "id": 67,
+    "holidayType": "ROUND_TRIP",
+    "title": "Kreta aktywnie",
+    "description": "Pałac Minosa, weneckie porty i trekking przez najdłuższy wąwóz Europy.",
+    "country": "Grecja",
+    "startDate": "2027-09-30",
+    "endDate": "2027-10-09",
+    "departureCity": "Katowice",
+    "transportType": "PLANE",
+    "maxGuests": 20,
+    "mealPlan": "HALF_BOARD",
+    "pricePerPerson": 4149.0,
+    "customerRating": 8.8,
+    "images": [
+      "https://picsum.photos/seed/trip67-1/800/500",
+      "https://picsum.photos/seed/trip67-2/800/500",
+      "https://picsum.photos/seed/trip67-3/800/500"
+    ],
+    "tripRoute": [
+      "Heraklion",
+      "Knossos",
+      "Rethymno",
+      "Chania",
+      "Wąwóz Samaria"
+    ]
+  },
+  {
+    "id": 68,
+    "holidayType": "ROUND_TRIP",
+    "title": "Turcja egzotyczna",
+    "description": "Od Bosforu po księżycowe krajobrazy Kapadocji i trawertyny Pamukkale.",
+    "country": "Turcja",
+    "startDate": "2027-06-11",
+    "endDate": "2027-06-21",
+    "departureCity": "Poznań",
+    "transportType": "PLANE",
+    "maxGuests": 40,
+    "mealPlan": "FULL_BOARD",
+    "pricePerPerson": 4809.0,
+    "customerRating": 9.3,
+    "images": [
+      "https://picsum.photos/seed/trip68-1/800/500",
+      "https://picsum.photos/seed/trip68-2/800/500",
+      "https://picsum.photos/seed/trip68-3/800/500"
+    ],
+    "tripRoute": [
+      "Stambuł",
+      "Ankara",
+      "Kapadocja",
+      "Konya",
+      "Pamukkale",
+      "Efez"
+    ]
+  },
+  {
+    "id": 69,
+    "holidayType": "ROUND_TRIP",
+    "title": "Chorwacja i jej wybrzeże",
+    "description": "Jeziora Plitwickie, rzymski Split i mury obronne Dubrownika.",
+    "country": "Chorwacja",
+    "startDate": "2027-08-14",
+    "endDate": "2027-08-23",
+    "departureCity": "Katowice",
+    "transportType": "PLANE",
+    "maxGuests": 25,
+    "mealPlan": "HALF_BOARD",
+    "pricePerPerson": 4329.0,
+    "customerRating": 9.1,
+    "images": [
+      "https://picsum.photos/seed/trip69-1/800/500",
+      "https://picsum.photos/seed/trip69-2/800/500",
+      "https://picsum.photos/seed/trip69-3/800/500"
+    ],
+    "tripRoute": [
+      "Zagrzeb",
+      "Plitwice",
+      "Zadar",
+      "Szybenik",
+      "Split",
+      "Dubrownik"
+    ]
+  },
+  {
+    "id": 70,
+    "holidayType": "ROUND_TRIP",
+    "title": "Bałkańska mozaika",
+    "description": "Fiord Boka Kotorska, górskie serpentyny i monastyr wykuty w skale.",
+    "country": "Czarnogóra",
+    "startDate": "2027-07-05",
+    "endDate": "2027-07-12",
+    "departureCity": "Gdańsk",
+    "transportType": "PLANE",
+    "maxGuests": 30,
+    "mealPlan": "FULL_BOARD",
+    "pricePerPerson": 3819.0,
+    "customerRating": 8.2,
+    "images": [
+      "https://picsum.photos/seed/trip70-1/800/500",
+      "https://picsum.photos/seed/trip70-2/800/500",
+      "https://picsum.photos/seed/trip70-3/800/500"
+    ],
+    "tripRoute": [
+      "Kotor",
+      "Budva",
+      "Cetynia",
+      "Durmitor",
+      "Ostróg"
+    ]
+  },
+  {
+    "id": 71,
+    "holidayType": "ROUND_TRIP",
+    "title": "Egipt faraonów",
+    "description": "Piramidy, Dolina Królów i rejs po Nilu do Asuanu.",
+    "country": "Egipt",
+    "startDate": "2027-01-19",
+    "endDate": "2027-01-26",
+    "departureCity": "Kraków",
+    "transportType": "PLANE",
+    "maxGuests": 30,
+    "mealPlan": "HALF_BOARD",
+    "pricePerPerson": 3709.0,
+    "customerRating": 9.7,
+    "images": [
+      "https://picsum.photos/seed/trip71-1/800/500",
+      "https://picsum.photos/seed/trip71-2/800/500",
+      "https://picsum.photos/seed/trip71-3/800/500"
+    ],
+    "tripRoute": [
+      "Kair",
+      "Giza",
+      "Luksor",
+      "Edfu",
+      "Asuan"
+    ]
+  },
+  {
+    "id": 72,
+    "holidayType": "ROUND_TRIP",
+    "title": "Maroko - miasta królewskie",
+    "description": "Medyny pełne zapachów, souki i wieczór na placu Dżemaa el-Fna.",
+    "country": "Maroko",
+    "startDate": "2027-04-30",
+    "endDate": "2027-05-08",
+    "departureCity": "Warszawa",
+    "transportType": "PLANE",
+    "maxGuests": 40,
+    "mealPlan": "BREAKFAST",
+    "pricePerPerson": 4299.0,
+    "customerRating": 8.3,
+    "images": [
+      "https://picsum.photos/seed/trip72-1/800/500",
+      "https://picsum.photos/seed/trip72-2/800/500",
+      "https://picsum.photos/seed/trip72-3/800/500"
+    ],
+    "tripRoute": [
+      "Casablanca",
+      "Rabat",
+      "Meknes",
+      "Fez",
+      "Marrakesz"
+    ]
+  },
+  {
+    "id": 73,
+    "holidayType": "ROUND_TRIP",
+    "title": "Islandia - ogień i lód",
+    "description": "Gejzery, wodospady, czarne plaże i laguna lodowcowa.",
+    "country": "Islandia",
+    "startDate": "2027-09-19",
+    "endDate": "2027-09-28",
+    "departureCity": "Wrocław",
+    "transportType": "PLANE",
+    "maxGuests": 35,
+    "mealPlan": "HALF_BOARD",
+    "pricePerPerson": 6989.0,
+    "customerRating": 9.4,
+    "images": [
+      "https://picsum.photos/seed/trip73-1/800/500",
+      "https://picsum.photos/seed/trip73-2/800/500",
+      "https://picsum.photos/seed/trip73-3/800/500"
+    ],
+    "tripRoute": [
+      "Reykjavík",
+      "Thingvellir",
+      "Geysir",
+      "Gullfoss",
+      "Vík",
+      "Jökulsárlón"
+    ]
+  },
+  {
+    "id": 74,
+    "holidayType": "ROUND_TRIP",
+    "title": "Norweskie fiordy",
+    "description": "Najpiękniejsze fiordy, Droga Trolli i kolorowe nabrzeże Bergen.",
+    "country": "Norwegia",
+    "startDate": "2027-08-19",
+    "endDate": "2027-08-27",
+    "departureCity": "Warszawa",
+    "transportType": "PLANE",
+    "maxGuests": 20,
+    "mealPlan": "BREAKFAST",
+    "pricePerPerson": 6059.0,
+    "customerRating": 9.0,
+    "images": [
+      "https://picsum.photos/seed/trip74-1/800/500",
+      "https://picsum.photos/seed/trip74-2/800/500",
+      "https://picsum.photos/seed/trip74-3/800/500"
+    ],
+    "tripRoute": [
+      "Oslo",
+      "Lillehammer",
+      "Geiranger",
+      "Ålesund",
+      "Bergen"
+    ]
+  },
+  {
+    "id": 75,
+    "holidayType": "ROUND_TRIP",
+    "title": "Szkocja - zamki i góry",
+    "description": "Zamki, Highlands i legenda Nessie. Degustacja whisky.",
+    "country": "Wielka Brytania",
+    "startDate": "2027-08-12",
+    "endDate": "2027-08-22",
+    "departureCity": "Poznań",
+    "transportType": "PLANE",
+    "maxGuests": 35,
+    "mealPlan": "BREAKFAST",
+    "pricePerPerson": 5989.0,
+    "customerRating": 7.6,
+    "images": [
+      "https://picsum.photos/seed/trip75-1/800/500",
+      "https://picsum.photos/seed/trip75-2/800/500",
+      "https://picsum.photos/seed/trip75-3/800/500"
+    ],
+    "tripRoute": [
+      "Edynburg",
+      "Stirling",
+      "Glencoe",
+      "Inverness",
+      "Loch Ness",
+      "Isle of Skye"
+    ]
+  },
+  {
+    "id": 76,
+    "holidayType": "ROUND_TRIP",
+    "title": "Wietnam z północy na południe",
+    "description": "Rejs wśród skał Ha Long, cesarskie Hue i lampiony Hoi An.",
+    "country": "Wietnam",
+    "startDate": "2027-07-19",
+    "endDate": "2027-07-27",
+    "departureCity": "Wrocław",
+    "transportType": "PLANE",
+    "maxGuests": 20,
+    "mealPlan": "FULL_BOARD",
+    "pricePerPerson": 5229.0,
+    "customerRating": 7.7,
+    "images": [
+      "https://picsum.photos/seed/trip76-1/800/500",
+      "https://picsum.photos/seed/trip76-2/800/500",
+      "https://picsum.photos/seed/trip76-3/800/500"
+    ],
+    "tripRoute": [
+      "Hanoi",
+      "Zatoka Ha Long",
+      "Hue",
+      "Hoi An",
+      "Sajgon"
+    ]
+  },
+  {
+    "id": 77,
+    "holidayType": "ROUND_TRIP",
+    "title": "Gruzja - wino i góry",
+    "description": "Gościnność, polifoniczny śpiew i wino z kwewri u stóp Kaukazu.",
+    "country": "Gruzja",
+    "startDate": "2027-05-23",
+    "endDate": "2027-05-31",
+    "departureCity": "Gdańsk",
+    "transportType": "PLANE",
+    "maxGuests": 35,
+    "mealPlan": "FULL_BOARD",
+    "pricePerPerson": 3869.0,
+    "customerRating": 7.8,
+    "images": [
+      "https://picsum.photos/seed/trip77-1/800/500",
+      "https://picsum.photos/seed/trip77-2/800/500",
+      "https://picsum.photos/seed/trip77-3/800/500"
+    ],
+    "tripRoute": [
+      "Tbilisi",
+      "Mccheta",
+      "Kazbegi",
+      "Sighnaghi",
+      "Kachetia"
+    ]
+  },
+  {
+    "id": 78,
+    "holidayType": "ROUND_TRIP",
+    "title": "Rumunia - Transylwania",
+    "description": "Zamek Drakuli, saskie miasteczka i Karpaty.",
+    "country": "Rumunia",
+    "startDate": "2027-06-30",
+    "endDate": "2027-07-09",
+    "departureCity": "Gdańsk",
+    "transportType": "PLANE",
+    "maxGuests": 40,
+    "mealPlan": "BREAKFAST",
+    "pricePerPerson": 4099.0,
+    "customerRating": 9.2,
+    "images": [
+      "https://picsum.photos/seed/trip78-1/800/500",
+      "https://picsum.photos/seed/trip78-2/800/500",
+      "https://picsum.photos/seed/trip78-3/800/500"
+    ],
+    "tripRoute": [
+      "Bukareszt",
+      "Sinaia",
+      "Bran",
+      "Braszów",
+      "Sighișoara",
+      "Sybin"
+    ]
   }
 ]
