@@ -30,5 +30,11 @@ public class ResultsPanel extends JPanel {
     }
 
     public void showOffers(List<Offer> offers) {
+        resultsArea.setText("");
+        resultsArea.append("Znaleziono " + offers.size() + " ofert\n\n");
+        for (Offer offer : offers) {
+            resultsArea.append(offer + "\n");
+        }
+        resultsArea.setCaretPosition(0); 
     }
 }
