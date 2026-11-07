@@ -15,14 +15,16 @@ public final class Theme {
     public static final Color TEXT       = new Color(0x1B2A3A);
     public static final Color TEXT_MUTED = new Color(0x5B6B7C);  // szary tekst w kartach
 
-    public static final Font CARD_TITLE_FONT = new Font("SansSerif", Font.BOLD, 16);
-    public static final Font BUTTON_FONT = new Font("SansSerif", Font.BOLD, 18);
-    public static final Font SECTION_TITLE_FONT = new Font("SansSerif", Font.BOLD, 22);
-    public static final Font LOGO_FONT = new Font("SansSerif", Font.BOLD, 26);
-    public static final Font CARD_TEXT_FONT = new Font("SansSerif", Font.PLAIN, 14);
-    public static final Font LABEL_FONT = new Font("SansSerif", Font.PLAIN, 15);
-    public static final Font NAV_FONT = new Font("SansSerif", Font.BOLD, 16);
-    public static final Font FIELD_FONT = new Font("SansSerif", Font.PLAIN, 17);
+    private static final String FONT_FAMILY = "Inter";
+
+    public static final Font CARD_TITLE_FONT = new Font(FONT_FAMILY, Font.BOLD, 16);
+    public static final Font BUTTON_FONT = new Font(FONT_FAMILY, Font.BOLD, 18);
+    public static final Font SECTION_TITLE_FONT = new Font(FONT_FAMILY, Font.BOLD, 22);
+    public static final Font LOGO_FONT = new Font(FONT_FAMILY, Font.BOLD, 26);
+    public static final Font CARD_TEXT_FONT = new Font(FONT_FAMILY, Font.PLAIN, 14);
+    public static final Font LABEL_FONT = new Font(FONT_FAMILY, Font.PLAIN, 15);
+    public static final Font NAV_FONT = new Font(FONT_FAMILY, Font.PLAIN, 16);
+    public static final Font FIELD_FONT = new Font(FONT_FAMILY, Font.PLAIN, 17);
 
     public static JButton navButton(String text) {
         JButton button = new JButton(text);
