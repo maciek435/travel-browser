@@ -1,6 +1,7 @@
 package pl.travelbrowser.ui;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class MainWindow extends JFrame {
         super("Travel Browser");                                  
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
         setSize(1920, 1080);
-        setBackground(Theme.CARD_BG);
+        setBackground(Theme.BACKGROUND);
         setLayout(new BorderLayout());
         setLocationRelativeTo(null);
         
@@ -29,9 +30,13 @@ public class MainWindow extends JFrame {
         topPanel.add(new SearchPanel(), BorderLayout.CENTER);
 
         resultsPanel = new ResultsPanel();
+        resultsPanel.setBackground(Theme.BACKGROUND);
         add(resultsPanel, BorderLayout.CENTER);
 
         add(topPanel, BorderLayout.NORTH);
         add(resultsPanel, BorderLayout.CENTER);
+
+        resultsPanel.setBackground(Color.RED);
+        getContentPane().setBackground(Color.GREEN);
     }
 }

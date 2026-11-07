@@ -18,14 +18,17 @@ public class ResultsPanel extends JPanel {
     public ResultsPanel() {
         setLayout(new BorderLayout());
         resultsArea.setEditable(false);
-        setBackground(Theme.CARD_BG);
-        add(new JScrollPane(resultsArea), BorderLayout.CENTER);
+        setBackground(Theme.BACKGROUND);
+        resultsArea.setBackground(Theme.BACKGROUND);
+
         JScrollPane scrollPane = new JScrollPane(resultsArea);
         scrollPane.setBorder(BorderFactory.createEmptyBorder());
+        scrollPane.getViewport().setBackground(Theme.BACKGROUND);
         add(scrollPane, BorderLayout.CENTER);
+
+
     }
 
     public void showOffers(List<Offer> offers) {
-        // wyczyść pole, wpisz liczbę wyników i każdą ofertę w nowej linii
     }
 }
