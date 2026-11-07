@@ -12,18 +12,24 @@ import pl.travelbrowser.model.Offer;
 public class MainWindow extends JFrame {
 
     private final List<Offer> offers;
+    private final ResultsPanel resultsPanel;
 
     public MainWindow(List<Offer> offers) {
         super("Travel Browser");                                  
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
         setSize(1920, 1080);
+        setBackground(Theme.CARD_BG);
         setLayout(new BorderLayout());
         setLocationRelativeTo(null);
-
+        
         this.offers = offers;
 
         JPanel topPanel = new JPanel(new BorderLayout());
-        JPanel resultsPanel = new JPanel(new FlowLayout());
+        topPanel.add(new HeaderPanel(), BorderLayout.NORTH);
+        topPanel.add(new SearchPanel(), BorderLayout.CENTER);
+
+        resultsPanel = new ResultsPanel();
+        add(resultsPanel, BorderLayout.CENTER);
 
         add(topPanel, BorderLayout.NORTH);
         add(resultsPanel, BorderLayout.CENTER);
