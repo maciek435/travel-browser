@@ -7,7 +7,9 @@ import java.util.List;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
+import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.fonts.inter.FlatInterFont;
 
 import pl.travelbrowser.data.OfferLoader;
 import pl.travelbrowser.model.Offer;
@@ -25,6 +27,9 @@ public class App {
             }
 
             System.out.println("Liczba ofert: " + offers.size());
+            
+            FlatInterFont.install();                                // rejestruje czcionkę Inter w programie
+            FlatLaf.setPreferredFontFamily(FlatInterFont.FAMILY);   // domyślna czcionka wszystkich komponentów
 
             FlatLightLaf.setup();
             UIManager.put("Button.arc", 12);       
