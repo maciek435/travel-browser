@@ -28,8 +28,8 @@ public class App {
 
             System.out.println("Liczba ofert: " + offers.size());
             
-            FlatInterFont.install();                                // rejestruje czcionkę Inter w programie
-            FlatLaf.setPreferredFontFamily(FlatInterFont.FAMILY);   // domyślna czcionka wszystkich komponentów
+            FlatInterFont.install();                                
+            FlatLaf.setPreferredFontFamily(FlatInterFont.FAMILY);  
 
             FlatLightLaf.setup();
             UIManager.put("Button.arc", 12);       

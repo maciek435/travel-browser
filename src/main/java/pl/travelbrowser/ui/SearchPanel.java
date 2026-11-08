@@ -19,10 +19,7 @@ import javax.swing.JComponent;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JSpinner;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.SpinnerDateModel;
 import javax.swing.border.EmptyBorder;
 
 import pl.travelbrowser.model.SearchCriteria;
@@ -34,7 +31,6 @@ import raven.datetime.DatePicker;
 public class SearchPanel extends ImagePanel {
     
     private final JTextField destinationField = new JTextField();
-    // private final JSpinner dateSpinner = new JSpinner(new SpinnerDateModel());
     private final DatePicker datePicker = new DatePicker();
     private final JFormattedTextField dateField = new JFormattedTextField();
     private final JComboBox<String> guestsBox = new JComboBox<>(new String[] {"Dowolnie", "1", "2", "3",
@@ -44,7 +40,7 @@ public class SearchPanel extends ImagePanel {
     public SearchPanel() {
         setLayout(new GridBagLayout());
         setBackground(Theme.BACKGROUND);
-        setPreferredSize(new Dimension(0, 400));
+        setPreferredSize(new Dimension(0, 250));
         
         URL url = getClass().getResource("/images/search_background.jpg");
         if (url != null) {
