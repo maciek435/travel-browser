@@ -14,7 +14,6 @@ public final class Theme {
     public static final Color ACCENT     = new Color(0xFF6B4A);  // koralowy przycisk
     public static final Color TEXT       = new Color(0x1B2A3A);
     public static final Color TEXT_MUTED = new Color(0x5B6B7C);  // szary tekst w kartach
-
     private static final String FONT_FAMILY = "Inter";
 
     public static final Font CARD_TITLE_FONT = new Font(FONT_FAMILY, Font.BOLD, 16);
@@ -46,4 +45,16 @@ public final class Theme {
         button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         return button;
     }
+    
+    public static JButton secondaryButton(String text) {
+        JButton button = new JButton(text);
+        button.setFont(FIELD_FONT);
+        button.setForeground(HEADER_BG);
+        button.setBackground(Color.WHITE);
+        button.putClientProperty("JButton.borderColor", BORDER);
+        button.setFocusPainted(false);
+        button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        return button;
+    }
+    
 }

@@ -16,6 +16,7 @@ public class MainWindow extends JFrame {
     private final ResultsPanel resultsPanel;
     private final OfferSearch offerSearch = new OfferSearch();
     private final SearchPanel searchPanel = new SearchPanel();
+    private final FiltersDialog filtersDialog;
 
     public MainWindow(List<Offer> offers) {
         super("Travel Browser");                                  
@@ -25,6 +26,7 @@ public class MainWindow extends JFrame {
         setLocationRelativeTo(null);
         
         this.offers = offers;
+        filtersDialog = new FiltersDialog(this, offers);
 
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.add(new HeaderPanel(), BorderLayout.NORTH);
@@ -35,11 +37,15 @@ public class MainWindow extends JFrame {
         add(resultsPanel, BorderLayout.CENTER);
         add(topPanel, BorderLayout.NORTH);
 
-        searchPanel.addSearchListener(e -> {
-            SearchCriteria criteria = searchPanel.buildCriteria();
-            List<Offer> suitedOffers = offerSearch.search(offers, criteria);
-            resultsPanel.showOffers(suitedOffers);
-        });
+        searchPanel.addSearchListener(e -> runSearch());
+        filtersDialog.addApplyListener(e -> runSearch());
+        resultsPanel.addFiltersListener(e -> filtersDialog.setVisible(true));
+    }
 
+    private void runSearch() {
+        SearchCriteria criteria = searchPanel.buildCriteria();
+        filtersDialog.applyTo(criteria);
+        List<Offer> results = offerSearch.search(offers, criteria);
+        resultsPanel.showOffers(results);
     }
 }

@@ -2,9 +2,11 @@ package pl.travelbrowser.ui;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
@@ -17,7 +19,7 @@ public class ResultsPanel extends JPanel {
 
     private final JLabel titleLabel = new JLabel();
     private final JPanel grid = new JPanel(new GridLayout(0, 4, 24, 24));
-
+    private final JButton filtersButton = Theme.secondaryButton("Filtry");
 
     public ResultsPanel() {
         setLayout(new BorderLayout());
@@ -26,8 +28,13 @@ public class ResultsPanel extends JPanel {
 
         titleLabel.setFont(Theme.SECTION_TITLE_FONT);
         titleLabel.setForeground(Theme.TEXT);
-        titleLabel.setBorder(new EmptyBorder(0, 0, 16, 0));
-        add(titleLabel, BorderLayout.NORTH);
+        
+        JPanel topBar = new JPanel(new BorderLayout());
+        topBar.setOpaque(false);
+        topBar.setBorder(new EmptyBorder(0, 0, 16, 0));
+        topBar.add(titleLabel, BorderLayout.WEST);
+        topBar.add(filtersButton, BorderLayout.EAST);
+        add(topBar, BorderLayout.NORTH);
 
         grid.setOpaque(false);
 
@@ -51,5 +58,9 @@ public class ResultsPanel extends JPanel {
         }
         grid.revalidate();
         grid.repaint();
+    }
+
+    public void addFiltersListener(ActionListener listener) {
+        filtersButton.addActionListener(listener);
     }
 }

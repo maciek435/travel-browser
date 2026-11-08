@@ -18,11 +18,23 @@ public class OfferSearch {
     }
 
     private boolean matches (Offer offer, SearchCriteria criteria) {
-        if (criteria.getHolidayType() != null && !offer.getTypeName().equalsIgnoreCase(criteria.getHolidayType())) {
+        if (!criteria.getHolidayTypes().isEmpty() && !criteria.getHolidayTypes().contains(offer.getTypeName())) {
             return false;
         }
 
-        if (criteria.getCountry() != null && !offer.getCountry().equalsIgnoreCase(criteria.getCountry())) {
+        if (!criteria.getCountries().isEmpty() && !criteria.getCountries().contains(offer.getCountry())) {
+            return false;
+        }
+
+        if (!criteria.getDepartureCities().isEmpty() && !criteria.getDepartureCities().contains(offer.getDepartureCity())) {
+            return false;
+        }
+
+        if (!criteria.getTransportTypes().isEmpty() && !criteria.getTransportTypes().contains(offer.getTransportType())) {
+            return false;
+        }
+
+        if (!criteria.getMealPlans().isEmpty() && !criteria.getMealPlans().contains(offer.getMealPlan())) {
             return false;
         }
 
@@ -51,8 +63,13 @@ public class OfferSearch {
             }
         }
 
-        if (criteria.getGuests() != null && offer.getMaxGuests() < (criteria.getGuests())) {
-            return false;
+        if (!criteria.getFacilities().isEmpty()) {
+            if (!(offer instanceof HotelOffer hotel)) {
+                return false;                      
+            }
+            if (!hotel.getFacilities().containsAll(criteria.getFacilities())) {
+                return false;                      
+            }
         }
 
         if (criteria.getSearchText() != null && !criteria.getSearchText().isBlank()) {

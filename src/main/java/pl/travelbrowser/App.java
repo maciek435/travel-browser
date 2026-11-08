@@ -36,6 +36,11 @@ public class App {
             UIManager.put("Component.arc", 12);    
             UIManager.put("TextComponent.arc", 12);
 
+            // OfferSearch search = new OfferSearch();
+            // SearchCriteria c = new SearchCriteria();
+            // c.getTransportTypes().add("BUS");
+            // System.out.println("AI: " + search.search(offers, c).size());
+
             SwingUtilities.invokeLater(() -> new MainWindow(offers).setVisible(true));
             
         } catch (NoSuchFileException e) {
