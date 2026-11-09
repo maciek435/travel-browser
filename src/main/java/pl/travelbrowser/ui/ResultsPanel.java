@@ -4,15 +4,18 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.awt.FlowLayout;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
 
 import pl.travelbrowser.model.Offer;
+import pl.travelbrowser.model.SortOption;
 
 
 public class ResultsPanel extends JPanel {
@@ -20,6 +23,7 @@ public class ResultsPanel extends JPanel {
     private final JLabel titleLabel = new JLabel();
     private final JPanel grid = new JPanel(new GridLayout(0, 4, 24, 24));
     private final JButton filtersButton = Theme.secondaryButton("Filtry");
+    private final JComboBox<SortOption> sortBox = new JComboBox<>(SortOption.values());
 
     public ResultsPanel() {
         setLayout(new BorderLayout());
@@ -33,8 +37,13 @@ public class ResultsPanel extends JPanel {
         topBar.setOpaque(false);
         topBar.setBorder(new EmptyBorder(0, 0, 16, 0));
         topBar.add(titleLabel, BorderLayout.WEST);
-        topBar.add(filtersButton, BorderLayout.EAST);
         add(topBar, BorderLayout.NORTH);
+
+        JPanel controls = new JPanel(new FlowLayout(FlowLayout.RIGHT, 12, 0));
+        controls.setOpaque(false);
+        controls.add(sortBox);
+        controls.add(filtersButton);
+        topBar.add(controls, BorderLayout.EAST); 
 
         grid.setOpaque(false);
 
@@ -51,7 +60,7 @@ public class ResultsPanel extends JPanel {
     }
 
     public void showOffers(List<Offer> offers) {
-        titleLabel.setText("Znaleziono " + offers.size() + " ofert\n\n");
+        titleLabel.setText("Znaleziono " + offers.size() + " ofert");
         grid.removeAll();
         for (Offer offer : offers) {
            grid.add(new OfferCard(offer));
@@ -62,5 +71,13 @@ public class ResultsPanel extends JPanel {
 
     public void addFiltersListener(ActionListener listener) {
         filtersButton.addActionListener(listener);
+    }
+
+    public SortOption getSelectedSort() {
+        return (SortOption) sortBox.getSelectedItem();       
+    }
+
+    public void addSortListener(ActionListener listener) {
+        sortBox.addActionListener(listener);
     }
 }

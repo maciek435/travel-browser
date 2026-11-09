@@ -29,9 +29,9 @@ public class HeaderPanel extends JPanel {
         //linki prawa strona
         JPanel nav = new JPanel(new FlowLayout(FlowLayout.RIGHT, 24, 0));
         nav.setOpaque(false);
-        nav.add(Theme.navButton("Odkrywaj"));
-        nav.add(Theme.navButton("Okazje"));
-        nav.add(Theme.navButton("Zapisane"));
+        // nav.add(Theme.navButton("Odkrywaj"));
+        // nav.add(Theme.navButton("Okazje"));
+        // nav.add(Theme.navButton("Zapisane"));
 
         JPanel navWrapper = new JPanel(new GridBagLayout());
         navWrapper.setOpaque(false);

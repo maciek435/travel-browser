@@ -40,12 +40,14 @@ public class MainWindow extends JFrame {
         searchPanel.addSearchListener(e -> runSearch());
         filtersDialog.addApplyListener(e -> runSearch());
         resultsPanel.addFiltersListener(e -> filtersDialog.setVisible(true));
+        resultsPanel.addSortListener(e -> runSearch());
     }
 
     private void runSearch() {
         SearchCriteria criteria = searchPanel.buildCriteria();
         filtersDialog.applyTo(criteria);
         List<Offer> results = offerSearch.search(offers, criteria);
+        results = offerSearch.sort(results, resultsPanel.getSelectedSort());
         resultsPanel.showOffers(results);
     }
 }
