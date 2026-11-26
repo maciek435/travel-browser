@@ -1,10 +1,12 @@
 package pl.travelbrowser.service;
 
 import pl.travelbrowser.model.SearchCriteria;
+import pl.travelbrowser.model.SortOption;
 import pl.travelbrowser.model.HotelOffer;
 import pl.travelbrowser.model.Offer;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class OfferSearch {
     public List<Offer> search (List<Offer> offers, SearchCriteria criteria) {
@@ -18,15 +20,35 @@ public class OfferSearch {
     }
 
     private boolean matches (Offer offer, SearchCriteria criteria) {
-        if (criteria.getHolidayType() != null && !offer.getTypeName().equalsIgnoreCase(criteria.getHolidayType())) {
+        if (!criteria.getHolidayTypes().isEmpty() && !criteria.getHolidayTypes().contains(offer.getTypeName())) {
             return false;
         }
 
-        if (criteria.getCountry() != null && !offer.getCountry().equalsIgnoreCase(criteria.getCountry())) {
+        if (!criteria.getCountries().isEmpty() && !criteria.getCountries().contains(offer.getCountry())) {
+            return false;
+        }
+
+        if (!criteria.getDepartureCities().isEmpty() && !criteria.getDepartureCities().contains(offer.getDepartureCity())) {
+            return false;
+        }
+
+        if (!criteria.getTransportTypes().isEmpty() && !criteria.getTransportTypes().contains(offer.getTransportType())) {
+            return false;
+        }
+
+        if (!criteria.getMealPlans().isEmpty() && !criteria.getMealPlans().contains(offer.getMealPlan())) {
             return false;
         }
 
         if (criteria.getMinPrice() != null && offer.getPricePerPerson() < criteria.getMinPrice()) {
+            return false;
+        }
+
+        if (criteria.getGuests() != null && offer.getMaxGuests() < criteria.getGuests()) {
+            return false;
+        }
+
+        if (criteria.getMinRating() != null && offer.getCustomerRating() < criteria.getMinRating()) {
             return false;
         }
 
@@ -51,8 +73,13 @@ public class OfferSearch {
             }
         }
 
-        if (criteria.getGuests() != null && offer.getMaxGuests() < (criteria.getGuests())) {
-            return false;
+        if (!criteria.getFacilities().isEmpty()) {
+            if (!(offer instanceof HotelOffer hotel)) {
+                return false;                      
+            }
+            if (!hotel.getFacilities().containsAll(criteria.getFacilities())) {
+                return false;                      
+            }
         }
 
         if (criteria.getSearchText() != null && !criteria.getSearchText().isBlank()) {
@@ -65,4 +92,17 @@ public class OfferSearch {
 
         return true;
     }
+
+    public List<Offer> sort(List<Offer> offers, SortOption option) {
+    List<Offer> sorted = new ArrayList<>(offers);
+
+    switch (option) {
+        case PRICE_ASC -> sorted.sort(Comparator.comparingDouble(Offer::getPricePerPerson));
+        case PRICE_DESC -> sorted.sort(Comparator.comparingDouble(Offer::getPricePerPerson).reversed());
+        case RATING_DESC -> sorted.sort(Comparator.comparingDouble(Offer::getCustomerRating).reversed());
+        case DATE_ASC -> sorted.sort(Comparator.comparing(Offer::getStartDate));
+        case DEFAULT -> { }                         
+    }
+    return sorted;
+}
 }
