@@ -1,6 +1,7 @@
 package pl.travelbrowser.ui;
 
 import java.awt.BorderLayout;
+import java.awt.CardLayout;
 import java.util.List;
 
 import javax.swing.JFrame;
@@ -17,6 +18,8 @@ public class MainWindow extends JFrame {
     private final OfferSearch offerSearch = new OfferSearch();
     private final SearchPanel searchPanel = new SearchPanel();
     private final FiltersDialog filtersDialog;
+    private final CardLayout cardLayout = new CardLayout();
+    private final JPanel cards = new JPanel(cardLayout);    
 
     public MainWindow(List<Offer> offers) {
         super("Travel Browser");                                  
@@ -34,8 +37,16 @@ public class MainWindow extends JFrame {
 
         resultsPanel = new ResultsPanel();
 
-        add(resultsPanel, BorderLayout.CENTER);
-        add(topPanel, BorderLayout.NORTH);
+        JPanel mainView = new JPanel(new BorderLayout());
+        mainView.add(topPanel, BorderLayout.NORTH);
+        mainView.add(resultsPanel, BorderLayout.CENTER);
+
+        StartPanel startPanel = new StartPanel();
+        cards.add(startPanel, "start");    
+        cards.add(mainView, "main");
+        add(cards, BorderLayout.CENTER);
+
+        startPanel.addStartListener(e -> cardLayout.show(cards, "main"));
 
         searchPanel.addSearchListener(e -> runSearch());
         filtersDialog.addApplyListener(e -> runSearch());

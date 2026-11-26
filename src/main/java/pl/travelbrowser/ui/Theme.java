@@ -32,7 +32,7 @@ public final class Theme {
         button.setContentAreaFilled(false);   // bez tła
         button.setBorderPainted(false);       // bez ramki
         button.setFocusPainted(false);        // bez ramki po kliknięciu
-        button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));  // "rączka" jak przy linku
+        button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));  // jak przy linku
         return button;
     }
 

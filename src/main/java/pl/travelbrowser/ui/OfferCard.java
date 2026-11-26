@@ -44,6 +44,7 @@ public class OfferCard extends RoundedPanel {
         info.add(text(offer.getTitle(), Theme.CARD_TITLE_FONT, Theme.TEXT));
         info.add(text(offer.getTypeName() + " · " + offer.getCountry(), Theme.CARD_TEXT_FONT, Theme.TEXT_MUTED));
         info.add(text(offer.getStartDate().format(DATE) + " - " + offer.getEndDate().format(DATE), Theme.CARD_TEXT_FONT, Theme.TEXT_MUTED));
+        info.add(text(String.format("Ocena: %.1f / 10", offer.getCustomerRating()), Theme.CARD_TEXT_FONT, Theme.TEXT));
         info.add(text(String.format("od %.0f zł", offer.getPricePerPerson()), Theme.CARD_TITLE_FONT, Theme.ACCENT));
 
         add(info, BorderLayout.CENTER);
